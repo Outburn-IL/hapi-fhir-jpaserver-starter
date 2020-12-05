@@ -29,7 +29,8 @@ public class EnvironmentHelper {
       properties.put("hibernate.cache.use_structured_entries", "false");
       properties.put("hibernate.cache.use_minimal_puts", "false");
       properties.put("hibernate.search.default.directory_provider", "filesystem");
-      properties.put("hibernate.search.default.indexBase", "target/lucenefiles");
+      properties.put("hibernate.search.default.indexBase", "/usr/lucene/indexes");
+      // properties.put("hibernate.search.default.indexBase", "target/lucenefiles");
       properties.put("hibernate.search.lucene_version", "LUCENE_CURRENT");
     } else {
       Arrays.asList(environment.getProperty("spring.jpa.properties", String.class).split(" ")).stream().forEach(s ->
